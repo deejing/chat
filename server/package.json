@@ -1,0 +1,22 @@
+{
+    "author": {
+        "name": "Dechapon Bunpia",
+        "email": "dbunpia@gmail.com",
+        "url": "http://deejing.de/"
+    },
+	"name": "server",
+	"version": "0.0.1",
+	"homepage": "",
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"scripts": {
+		"test": "grunt"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"socket.io": "latest",
+		"mysql": "latest",
+        "express": "3.4.8"
+	}
+}

@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    font: 16px/160% 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #666;
+    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(50px, #ffffff), color-stop(100%, #cecece));
+    background-image: -webkit-radial-gradient(50% 50%, #ffffff 50px, #cecece 100%);
+    background-image: -moz-radial-gradient(50% 50%, #ffffff 50px, #cecece 100%);
+    background-image: -o-radial-gradient(50% 50%, #ffffff 50px, #cecece 100%);
+    background-image: -ms-radial-gradient(50% 50%, #ffffff 50px, #cecece 100%);
+    background-image: radial-gradient(50% 50%, #ffffff 50px, #cecece 100%);
+    background-color: #cecece;
+    width: 100%;
+    height: 100%;
+}
+#wrapper {
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    background: url("../img/noise.png");
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.socket-log {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+}
+
+.socket-log strong {
+    font-size: 15px;
+    color: #ff3600;
+}
+
+#msg-form {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+}
+#msg-form label {
+    width: auto;
+    padding: 5px 20px;
+    display: block;
+    position: relative;
+    height: 30px;
+}
+
+input[type=text] {
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    display: block;
+    min-height: 34px;
+    background-image: none;
+    font-family: 'Open Sans', sans-serif;
+}
+input[type=text]:focus {
+    background: rgba(255,255,255,0.75);
+}
+label {
+    font-weight: 700;
+}
+
+#message-wrapper {
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    overflow-y: auto;
+}
+#message {
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    padding: 20px 20px;
+}
+
+#message li {
+    padding: 5px 15px;
+	margin-bottom: 10px;
+	clear: both;
+}
+#message li.hide {
+    opacity: 0;
+}
+#message li.show {
+    opacity: 1;
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;  
+}
+#message li strong {
+    font-weight: bold;
+}
+
+#message li a {
+    color: #fff;
+    font-style: italic;
+}
+#message li a:hover {
+    text-decoration: none;
+}
+
+.user-write div, .user-post div {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.user-write div {
+    color: #fff;
+    /*padding-left: 25px !important;*/
+	background:	#b0b0b0;
+	float: right;
+	text-align: right;
+}
+.user-write span {
+    /*font-style: italic;*/
+}
+.user-post div { 
+    color: #366a16; 
+	background:	#b4d3a1;
+	float: left;
+}
+.user-login {
+    color: #085bb0;
+}
+.user-logout {
+    color: #e08c72;
+}
+.user-list {
+    color: #c180c9;
+    font-size: 11px;
+}
+.user-list strong {
+    padding-left: 10px;
+}
+
+#login-form {
+    width: 500px;
+    padding: 1em;
+    background-color: rgba(255,255,255,.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -100px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.typing-info {
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+}
+
+.user-post.color-red div,
+.user-write.color-red div {
+    background-color: #d41b1b;
+    color: #ffd9d9;
+}
+.user-post.color-blue div,
+.user-write.color-blue div {
+    background-color: #187eb8;
+    color: #bbe6ff;    
+}
+.user-post.color-orange div,
+.user-write.color-orange div {
+    background-color: #ffa200;
+    color: #65440b;
+}
+.user-post.color-ofdeath div,
+.user-write.color-ofdeath div {
+    background-color: #000;
+    color: #5b0404;
+}
+.user-post.color-green div,
+.user-write.color-green div {
+    background-color: #13a516;
+    color: #ccffcd;
+}
+
+
+
+.user-post.color-unicorn div,
+.user-write.color-unicorn div {
+    background-color: #ff4ac6;
+    color: #fdaae3;
+
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@media (max-width: 768px) {
+    .login-wrapper {
+        position: relative;
+        margin: 0 5%;
+        width: 90%;
+        height: 100%;
+    }
+    #login-form {
+        width: 100%;
+        left: 0;
+        margin-left: auto;
+    }
+}
