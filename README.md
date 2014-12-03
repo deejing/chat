@@ -1,9 +1,5 @@
-# Chat
+# Chat Server
 ========================
-
-## Server
-------------------------
-
     $ cd server
     $ npm install
     $ node server.js
